@@ -1,0 +1,13 @@
+index.md
+        gst-plugins-base-allocators-doc.json
+        gst-plugins-base-audio-doc.json
+        gst-plugins-base-pbutils-doc.json
+        gst-plugins-base-riff-doc.json
+        gst-plugins-base-rtsp-doc.json
+        gst-plugins-base-tag-doc.json
+        gst-plugins-base-app-doc.json
+        gst-plugins-base-fft-doc.json
+        gst-plugins-base-rtp-doc.json
+        gst-plugins-base-sdp-doc.json
+        gst-plugins-base-video-doc.json
+
