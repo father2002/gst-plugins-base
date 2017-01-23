@@ -20,7 +20,7 @@ gstallocators = library('gstallocators-@0@'.format(api_version),
 allocators_gen_sources  = []
 if build_gir
   gst_gir_extra_args = gir_init_section + [ '--c-include=gst/allocators/allocators.h' ]
-  allocators_gen_sources += [gnome.generate_gir(gstallocators,
+  allocators_gir = gnome.generate_gir(gstallocators,
     sources : gst_allocators_sources + gst_allocators_headers,
     namespace : 'GstAllocators',
     nsversion : api_version,
@@ -31,7 +31,8 @@ if build_gir
     install : true,
     extra_args : gst_gir_extra_args,
     dependencies : [gst_dep]
-  )]
+  )
+  allocators_gen_sources += allocators_gir
 endif
 
 allocators_dep = declare_dependency(link_with: gstallocators,
