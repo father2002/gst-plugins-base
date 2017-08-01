@@ -255,6 +255,7 @@ gir_init_section = [ '--add-init-section=extern void gst_init(gint*,gchar**);' +
     'gst_init(NULL,NULL);' ]
 
 plugins_component = component('plugins')
+python3 = import('python3').find_python()
 subdir('gst-libs')
 subdir('gst')
 subdir('ext')
@@ -268,5 +269,4 @@ subdir('docs')
 # Use core_conf after all subdirs have set values
 configure_file(output : 'config.h', configuration : core_conf)
 
-python3 = import('python3').find_python()
 run_command(python3, '-c', 'import shutil; shutil.copy("hooks/pre-commit.hook", ".git/hooks/pre-commit")')

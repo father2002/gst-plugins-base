@@ -16,12 +16,12 @@
                 "name": "adder",
                 "pad-templates": {
                     "sink_%%u": {
-                        "caps": "audio/x-raw\n         format: { S32LE, U32LE, S16LE, U16LE, S8, U8, F32LE, F64LE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S32LE,\n         U32LE,\n         S16LE,\n         U16LE,\n         S8,\n         U8,\n         F32LE,\n         F64LE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "sink",
                         "presence": "request"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S32LE, U32LE, S16LE, U16LE, S8, U8, F32LE, F64LE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S32LE,\n         U32LE,\n         S16LE,\n         U16LE,\n         S8,\n         U8,\n         F32LE,\n         F64LE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -55,7 +55,7 @@
         },
         "filename": "adder",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -136,7 +136,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -163,7 +163,7 @@
                 "name": "alsasink",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n         layout: interleaved\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\naudio/x-ac3\n         framed: true\naudio/x-eac3\n         framed: true\naudio/x-dts\n         framed: true\n     block-size: { (int)512, (int)1024, (int)2048 }\naudio/mpeg\n    mpegversion: 1\nmpegaudioversion: [ 1, 2 ]\n         parsed: true\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n    layout: interleaved\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\naudio/x-ac3\n    framed: true\naudio/x-eac3\n    framed: true\naudio/x-dts\n    framed: true\nblock-size: {\n         (int)512,\n         (int)1024,\n         (int)2048\n         }\naudio/mpeg\nmpegversion: 1\nmpegaudioversion: [\n         1,\n         3\n         ]\n    parsed: true\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -425,7 +425,7 @@
                 "name": "alsasrc",
                 "pad-templates": {
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n         layout: interleaved\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n    layout: interleaved\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -578,7 +578,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -591,7 +591,7 @@
         },
         "filename": "alsa",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1060,7 +1060,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -1107,7 +1107,7 @@
         },
         "filename": "app",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1129,12 +1129,12 @@
                 "name": "audioconvert",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: interleaved\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: interleaved\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: interleaved\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: interleaved\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -1236,7 +1236,7 @@
         },
         "filename": "audioconvert",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1257,12 +1257,12 @@
                 "name": "audiorate",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -1355,7 +1355,7 @@
         },
         "filename": "audiorate",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1377,12 +1377,12 @@
                 "name": "audioresample",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -1525,7 +1525,7 @@
         },
         "filename": "audioresample",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1547,7 +1547,7 @@
                 "name": "audiotestsrc",
                 "pad-templates": {
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE, S32LE,\n                   S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE, U20BE,\n                   S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE, S8, U8 }\n         layout: interleaved\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n",
+                        "caps": "audio/x-raw\n    format: {\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE,\n         S8,\n         U8\n         }\n    layout: interleaved\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -1651,7 +1651,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -1750,7 +1750,7 @@
         },
         "filename": "audiotestsrc",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -1774,7 +1774,7 @@
                 "name": "cdparanoiasrc",
                 "pad-templates": {
                     "src": {
-                        "caps": "audio/x-raw\n         format: S16LE\n         layout: interleaved\n           rate: 44100\n       channels: 2\n",
+                        "caps": "audio/x-raw\n    format: S16LE\n    layout: interleaved\n      rate: 44100\n  channels: 2\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -1941,7 +1941,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -1968,7 +1968,7 @@
         },
         "filename": "cdparanoia",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -2137,7 +2137,7 @@
         },
         "filename": "encoding",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -2379,7 +2379,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -2608,7 +2608,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -2621,7 +2621,7 @@
         },
         "filename": "gio",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -2630,7 +2630,7 @@
         "elements": {},
         "filename": "libvisual",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -2765,7 +2765,7 @@
                         "presence": "always"
                     },
                     "subtitle_%%u": {
-                        "caps": "text/x-cmml\n        encoded: true\nsubtitle/x-kate\napplication/x-kate\n",
+                        "caps": "text/x-cmml\n   encoded: true\nsubtitle/x-kate\napplication/x-kate\n",
                         "direction": "sink",
                         "presence": "request"
                     },
@@ -2895,7 +2895,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/ms-gsm\naudio/mpeg\n    mpegversion: 1\n          layer: 3\naudio/mpeg\n    mpegversion: 1\n          layer: 2\naudio/x-raw\n         format: { S8, U8, S16LE, U16LE, S24LE, U24LE, S32LE, U32LE }\n         layout: interleaved\naudio/x-vorbis\naudio/x-ac3\naudio/x-dts\naudio/mpeg\n    mpegversion: 4\naudio/x-alaw\naudio/x-mulaw\naudio/x-wms\n        bitrate: [ 0, 2147483647 ]\n    block_align: [ 1, 2147483647 ]\naudio/x-adpcm\n         layout: microsoft\n    block_align: [ 1, 2147483647 ]\naudio/x-adpcm\n         layout: dvi\n    block_align: [ 1, 2147483647 ]\naudio/x-truespeech\naudio/x-wma\n     wmaversion: 1\n        bitrate: [ 0, 2147483647 ]\n    block_align: [ 1, 2147483647 ]\naudio/x-wma\n     wmaversion: 2\n        bitrate: [ 0, 2147483647 ]\n    block_align: [ 1, 2147483647 ]\naudio/x-wma\n     wmaversion: 3\n        bitrate: [ 0, 2147483647 ]\n    block_align: [ 1, 2147483647 ]\naudio/x-vnd.sony.atrac3\naudio/x-raw\n         format: { F32LE, F64LE }\n         layout: interleaved\naudio/x-voxware\n    voxwaretype: 117\naudio/x-adpcm\n         layout: dk4\naudio/x-adpcm\n         layout: dk3\naudio/x-adpcm\n         layout: dvi\naudio/AMR\naudio/AMR-WB\naudio/x-siren\napplication/x-ogg-avi\n",
+                        "caps": "audio/ms-gsm\naudio/mpeg\nmpegversion: 1\n     layer: 3\naudio/mpeg\nmpegversion: 1\n     layer: 2\naudio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         U16LE,\n         S24LE,\n         U24LE,\n         S32LE,\n         U32LE\n         }\n    layout: interleaved\naudio/x-vorbis\naudio/x-ac3\naudio/x-dts\naudio/mpeg\nmpegversion: 4\naudio/x-alaw\naudio/x-mulaw\naudio/x-wms\n   bitrate: [\n         0,\n         2147483647\n         ]\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-adpcm\n    layout: microsoft\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-adpcm\n    layout: dvi\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-truespeech\naudio/x-wma\nwmaversion: 1\n   bitrate: [\n         0,\n         2147483647\n         ]\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-wma\nwmaversion: 2\n   bitrate: [\n         0,\n         2147483647\n         ]\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-wma\nwmaversion: 3\n   bitrate: [\n         0,\n         2147483647\n         ]\nblock_align: [\n         1,\n         2147483647\n         ]\naudio/x-vnd.sony.atrac3\naudio/x-raw\n    format: {\n         F32LE,\n         F64LE\n         }\n    layout: interleaved\naudio/x-voxware\nvoxwaretype: 117\naudio/x-adpcm\n    layout: dk4\naudio/x-adpcm\n    layout: dk3\naudio/x-adpcm\n    layout: dvi\naudio/AMR\naudio/AMR-WB\naudio/x-siren\napplication/x-ogg-avi\n",
                         "direction": "src",
                         "presence": "sometimes"
                     }
@@ -2957,7 +2957,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "text/x-raw\n         format: utf8\n",
+                        "caps": "text/x-raw\n    format: utf8\n",
                         "direction": "src",
                         "presence": "sometimes"
                     }
@@ -3019,7 +3019,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/mpeg\n    mpegversion: 4\n   systemstream: false\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-asus\n    asusversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-asus\n    asusversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-cirrus-logic-accupak\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-camstudio\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-compressed-yuv\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: { RGB8P, BGR, BGRx }\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-divx\n    divxversion: 3\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-divx\n    divxversion: 4\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-truemotion\n    trueversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-dv\n   systemstream: false\n      dvversion: 25\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-dv\n   systemstream: false\n      dvversion: 50\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-divx\n    divxversion: 5\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/mpeg\n    mpegversion: 4\n   systemstream: false\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-flash-video\n     flvversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp6-flash\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: itu\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: lucent\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h264\n        variant: itu\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-huffyuv\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-intel-h263\n        variant: intel\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: I420\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-indeo\n   indeoversion: 3\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-indeo\n   indeoversion: 4\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-indeo\n   indeoversion: 5\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: lead\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h264\n        variant: lead\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: microsoft\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/mpeg\n    mpegversion: 4\n   systemstream: false\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nimage/jpeg\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-msmpeg\n  msmpegversion: 42\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-msmpeg\n  msmpegversion: 43\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/mpeg\n   systemstream: false\n    mpegversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/mpeg\n   systemstream: false\n    mpegversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-msmpeg\n  msmpegversion: 41\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-mszh\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nimage/png\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-rle\n         layout: microsoft\n          depth: [ 1, 64 ]\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-indeo\n   indeoversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/sp5x\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-truemotion\n    trueversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-camtasia\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-ultimotion\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: UYVY\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-ati-vcr\n     vcrversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-ati-vcr\n     vcrversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: vdolive\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: vivo\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vmnc\n        version: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp3\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h264\n        variant: videosoft\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-wmv\n     wmvversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-wmv\n     wmvversion: 2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-wmv\n     wmvversion: 3\n         format: WMV3\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/mpeg\n    mpegversion: 4\n   systemstream: false\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-xan\n      wcversion: 4\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: YUY2\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: YVU9\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-zlib\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-cinepak\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h264\n        variant: itu\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-msvideocodec\n msvideoversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-h263\n        variant: xirlink\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-dirac\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-ffv\n     ffvversion: 1\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-kmvc\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp5\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp6\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp6-flash\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp7\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-vp8\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-mimic\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-apple-video\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-theora\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-fraps\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-aasc\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: YV12\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-loco\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-zmbv\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: v210\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\nvideo/x-raw\n         format: r210\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/mpeg\nmpegversion: 4\nsystemstream: false\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-asus\nasusversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-asus\nasusversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-cirrus-logic-accupak\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-camstudio\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-compressed-yuv\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: {\n         RGB8P,\n         BGR,\n         BGRx\n         }\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-divx\ndivxversion: 3\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-divx\ndivxversion: 4\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-truemotion\ntrueversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-dv\nsystemstream: false\n dvversion: 25\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-dv\nsystemstream: false\n dvversion: 50\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-divx\ndivxversion: 5\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/mpeg\nmpegversion: 4\nsystemstream: false\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-flash-video\nflvversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp6-flash\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: itu\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: lucent\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h264\n   variant: itu\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-huffyuv\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-intel-h263\n   variant: intel\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: I420\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-indeo\nindeoversion: 3\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-indeo\nindeoversion: 4\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-indeo\nindeoversion: 5\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: lead\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h264\n   variant: lead\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: microsoft\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/mpeg\nmpegversion: 4\nsystemstream: false\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nimage/jpeg\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-msmpeg\nmsmpegversion: 42\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-msmpeg\nmsmpegversion: 43\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/mpeg\nsystemstream: false\nmpegversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/mpeg\nsystemstream: false\nmpegversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-msmpeg\nmsmpegversion: 41\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-mszh\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nimage/png\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-rle\n    layout: microsoft\n     depth: [\n         1,\n         64\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-indeo\nindeoversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/sp5x\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-truemotion\ntrueversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-camtasia\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-ultimotion\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: UYVY\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-ati-vcr\nvcrversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-ati-vcr\nvcrversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: vdolive\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: vivo\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vmnc\n   version: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp3\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h264\n   variant: videosoft\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-wmv\nwmvversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-wmv\nwmvversion: 2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-wmv\nwmvversion: 3\n    format: WMV3\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/mpeg\nmpegversion: 4\nsystemstream: false\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-xan\n wcversion: 4\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: YUY2\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: YVU9\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-zlib\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-cinepak\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h264\n   variant: itu\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-msvideocodec\nmsvideoversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-h263\n   variant: xirlink\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-dirac\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-ffv\nffvversion: 1\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-kmvc\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp5\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp6\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp6-flash\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp7\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-vp8\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-mimic\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-apple-video\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-theora\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-fraps\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-aasc\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: YV12\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-loco\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-zmbv\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: v210\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\nvideo/x-raw\n    format: r210\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "sometimes"
                     }
@@ -3064,7 +3064,7 @@
         },
         "filename": "ogg",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -3086,12 +3086,12 @@
                 "name": "opusdec",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-opus\nchannel-mapping-family: 0\naudio/x-opus\nchannel-mapping-family: [ 1, 255 ]\n       channels: [ 1, 255 ]\n   stream-count: [ 1, 255 ]\n  coupled-count: [ 0, 255 ]\n",
+                        "caps": "audio/x-opus\nchannel-mapping-family: 0\naudio/x-opus\nchannel-mapping-family: [\n         1,\n         255\n         ]\n  channels: [\n         1,\n         255\n         ]\nstream-count: [\n         1,\n         255\n         ]\ncoupled-count: [\n         0,\n         255\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: S16LE\n         layout: interleaved\n           rate: { (int)48000, (int)24000, (int)16000, (int)12000, (int)8000 }\n       channels: [ 1, 8 ]\n",
+                        "caps": "audio/x-raw\n    format: S16LE\n    layout: interleaved\n      rate: {\n         (int)48000,\n         (int)24000,\n         (int)16000,\n         (int)12000,\n         (int)8000\n         }\n  channels: [\n         1,\n         8\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -3174,7 +3174,7 @@
                 "name": "opusenc",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: S16LE\n         layout: interleaved\n           rate: 48000\n       channels: [ 1, 8 ]\naudio/x-raw\n         format: S16LE\n         layout: interleaved\n           rate: { (int)8000, (int)12000, (int)16000, (int)24000 }\n       channels: [ 1, 8 ]\n",
+                        "caps": "audio/x-raw\n    format: S16LE\n    layout: interleaved\n      rate: 48000\n  channels: [\n         1,\n         8\n         ]\naudio/x-raw\n    format: S16LE\n    layout: interleaved\n      rate: {\n         (int)8000,\n         (int)12000,\n         (int)16000,\n         (int)24000\n         }\n  channels: [\n         1,\n         8\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
@@ -3425,7 +3425,7 @@
         },
         "filename": "opus",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -3447,12 +3447,12 @@
                 "name": "clockoverlay",
                 "pad-templates": {
                     "src": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     },
                     "video_sink": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -3605,6 +3605,47 @@
                         "construct": false,
                         "construct-only": false,
                         "type-name": "GstObject *",
+                        "writable": true
+                    },
+                    "scale-mode": {
+                        "blurb": "Scale text to compensate for and avoid distortion by subsequent video scaling.",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "none (0)",
+                        "enum": true,
+                        "type-name": "GstBaseTextOverlayScaleMode",
+                        "values": [
+                            {
+                                "desc": "none",
+                                "name": "none",
+                                "value": "0x00000000"
+                            },
+                            {
+                                "desc": "par",
+                                "name": "par",
+                                "value": "0x00000001"
+                            },
+                            {
+                                "desc": "display",
+                                "name": "display",
+                                "value": "0x00000002"
+                            },
+                            {
+                                "desc": "user",
+                                "name": "user",
+                                "value": "0x00000003"
+                            }
+                        ],
+                        "writable": true
+                    },
+                    "scale-pixel-aspect-ratio": {
+                        "blurb": "Pixel aspect ratio of video scale to compensate for in user scale-mode",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "1/1",
+                        "max": "100/1",
+                        "min": "1/100",
+                        "type-name": "GstFraction",
                         "writable": true
                     },
                     "shaded-background": {
@@ -3855,17 +3896,17 @@
                 "name": "textoverlay",
                 "pad-templates": {
                     "src": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     },
                     "text_sink": {
-                        "caps": "text/x-raw\n         format: { pango-markup, utf8 }\n",
+                        "caps": "text/x-raw\n    format: {\n         pango-markup,\n         utf8\n         }\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "video_sink": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -4018,6 +4059,47 @@
                         "construct": false,
                         "construct-only": false,
                         "type-name": "GstObject *",
+                        "writable": true
+                    },
+                    "scale-mode": {
+                        "blurb": "Scale text to compensate for and avoid distortion by subsequent video scaling.",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "none (0)",
+                        "enum": true,
+                        "type-name": "GstBaseTextOverlayScaleMode",
+                        "values": [
+                            {
+                                "desc": "none",
+                                "name": "none",
+                                "value": "0x00000000"
+                            },
+                            {
+                                "desc": "par",
+                                "name": "par",
+                                "value": "0x00000001"
+                            },
+                            {
+                                "desc": "display",
+                                "name": "display",
+                                "value": "0x00000002"
+                            },
+                            {
+                                "desc": "user",
+                                "name": "user",
+                                "value": "0x00000003"
+                            }
+                        ],
+                        "writable": true
+                    },
+                    "scale-pixel-aspect-ratio": {
+                        "blurb": "Pixel aspect ratio of video scale to compensate for in user scale-mode",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "1/1",
+                        "max": "100/1",
+                        "min": "1/100",
+                        "type-name": "GstFraction",
                         "writable": true
                     },
                     "shaded-background": {
@@ -4259,12 +4341,12 @@
                 "name": "textrender",
                 "pad-templates": {
                     "sink": {
-                        "caps": "text/x-raw\n         format: { pango-markup, utf8 }\n",
+                        "caps": "text/x-raw\n    format: {\n         pango-markup,\n         utf8\n         }\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { AYUV, ARGB }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         AYUV,\n         ARGB\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -4409,12 +4491,12 @@
                 "name": "timeoverlay",
                 "pad-templates": {
                     "src": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     },
                     "video_sink": {
-                        "caps": "video/x-raw\n         format: { BGRx, RGBx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR, RGB, BGR, I420, YV12, AYUV,\n                   YUY2, UYVY, v308, Y41B, Y42B, Y444, NV12, NV21, A420, YUV9, YVU9, IYU1, GRAY8\n                   }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         BGRx,\n         RGBx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         I420,\n         YV12,\n         AYUV,\n         YUY2,\n         UYVY,\n         v308,\n         Y41B,\n         Y42B,\n         Y444,\n         NV12,\n         NV21,\n         A420,\n         YUV9,\n         YVU9,\n         IYU1,\n         GRAY8\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -4567,6 +4649,47 @@
                         "construct": false,
                         "construct-only": false,
                         "type-name": "GstObject *",
+                        "writable": true
+                    },
+                    "scale-mode": {
+                        "blurb": "Scale text to compensate for and avoid distortion by subsequent video scaling.",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "none (0)",
+                        "enum": true,
+                        "type-name": "GstBaseTextOverlayScaleMode",
+                        "values": [
+                            {
+                                "desc": "none",
+                                "name": "none",
+                                "value": "0x00000000"
+                            },
+                            {
+                                "desc": "par",
+                                "name": "par",
+                                "value": "0x00000001"
+                            },
+                            {
+                                "desc": "display",
+                                "name": "display",
+                                "value": "0x00000002"
+                            },
+                            {
+                                "desc": "user",
+                                "name": "user",
+                                "value": "0x00000003"
+                            }
+                        ],
+                        "writable": true
+                    },
+                    "scale-pixel-aspect-ratio": {
+                        "blurb": "Pixel aspect ratio of video scale to compensate for in user scale-mode",
+                        "construct": false,
+                        "construct-only": false,
+                        "default": "1/1",
+                        "max": "100/1",
+                        "min": "1/100",
+                        "type-name": "GstFraction",
                         "writable": true
                     },
                     "shaded-background": {
@@ -4828,7 +4951,7 @@
         },
         "filename": "pango",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -4837,7 +4960,7 @@
         "elements": {},
         "filename": "pbtypes",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -7297,7 +7420,7 @@
         },
         "filename": "playback",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -7320,12 +7443,12 @@
                 "name": "rawaudioparse",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-unaligned-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\naudio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\naudio/x-alaw\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\naudio/x-mulaw\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n",
+                        "caps": "audio/x-unaligned-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\naudio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\naudio/x-alaw\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\naudio/x-mulaw\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\naudio/x-alaw\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\naudio/x-mulaw\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\naudio/x-alaw\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\naudio/x-mulaw\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -7683,12 +7806,12 @@
                 "name": "rawvideoparse",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-unaligned-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\nvideo/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-unaligned-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\nvideo/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -8224,12 +8347,12 @@
                 "name": "unalignedaudioparse",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-unaligned-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-unaligned-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { S8, U8, S16LE, S16BE, U16LE, U16BE, S24_32LE, S24_32BE, U24_32LE, U24_32BE,\n                   S32LE, S32BE, U32LE, U32BE, S24LE, S24BE, U24LE, U24BE, S20LE, S20BE, U20LE,\n                   U20BE, S18LE, S18BE, U18LE, U18BE, F32LE, F32BE, F64LE, F64BE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: { (string)interleaved, (string)non-interleaved }\n",
+                        "caps": "audio/x-raw\n    format: {\n         S8,\n         U8,\n         S16LE,\n         S16BE,\n         U16LE,\n         U16BE,\n         S24_32LE,\n         S24_32BE,\n         U24_32LE,\n         U24_32BE,\n         S32LE,\n         S32BE,\n         U32LE,\n         U32BE,\n         S24LE,\n         S24BE,\n         U24LE,\n         U24BE,\n         S20LE,\n         S20BE,\n         U20LE,\n         U20BE,\n         S18LE,\n         S18BE,\n         U18LE,\n         U18BE,\n         F32LE,\n         F32BE,\n         F64LE,\n         F64BE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: {\n         (string)interleaved,\n         (string)non-interleaved\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -8284,12 +8407,12 @@
                 "name": "unalignedvideoparse",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-unaligned-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-unaligned-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -8332,7 +8455,7 @@
         },
         "filename": "rawparse",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -8358,7 +8481,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "text/x-raw\n         format: pango-markup\n",
+                        "caps": "text/x-raw\n    format: pango-markup\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -8401,7 +8524,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "text/x-raw\n         format: { pango-markup, utf8 }\n",
+                        "caps": "text/x-raw\n    format: {\n         pango-markup,\n         utf8\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -8446,7 +8569,7 @@
         },
         "filename": "subparse",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -9567,7 +9690,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -9833,7 +9956,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -10483,7 +10606,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -10496,7 +10619,7 @@
         },
         "filename": "tcp",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -10523,7 +10646,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, Y42B, Y444 }\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         Y42B,\n         Y444\n         }\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -10562,12 +10685,12 @@
                 "name": "theoraenc",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-raw\n         format: { I420, Y42B, Y444 }\n      framerate: [ 1/2147483647, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         Y42B,\n         Y444\n         }\n framerate: [\n         1/2147483647,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-theora\n      framerate: [ 1/2147483647, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/x-theora\n framerate: [\n         1/2147483647,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -10771,7 +10894,7 @@
         },
         "filename": "theora",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -10780,7 +10903,7 @@
         "elements": {},
         "filename": "typefindfunctions",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -10803,12 +10926,12 @@
                 "name": "videoconvert",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -11080,7 +11203,7 @@
         },
         "filename": "videoconvert",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -11246,7 +11369,7 @@
         },
         "filename": "videorate",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -11269,12 +11392,12 @@
                 "name": "videoscale",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 32767 ]\n         height: [ 1, 32767 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 32767 ]\n         height: [ 1, 32767 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         32767\n         ]\n    height: [\n         1,\n         32767\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         32767\n         ]\n    height: [\n         1,\n         32767\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 32767 ]\n         height: [ 1, 32767 ]\n      framerate: [ 0/1, 2147483647/1 ]\n\nvideo/x-raw(ANY)\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 32767 ]\n         height: [ 1, 32767 ]\n      framerate: [ 0/1, 2147483647/1 ]\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         32767\n         ]\n    height: [\n         1,\n         32767\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n\nvideo/x-raw(ANY)\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         32767\n         ]\n    height: [\n         1,\n         32767\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -11434,7 +11557,7 @@
         },
         "filename": "videoscale",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -11457,7 +11580,7 @@
                 "name": "videotestsrc",
                 "pad-templates": {
                     "src": {
-                        "caps": "video/x-raw\n         format: { I420, YV12, YUY2, UYVY, AYUV, RGBx, BGRx, xRGB, xBGR, RGBA, BGRA, ARGB, ABGR,\n                   RGB, BGR, Y41B, Y42B, YVYU, Y444, v210, v216, NV12, NV21, GRAY8, GRAY16_BE,\n                   GRAY16_LE, v308, RGB16, BGR16, RGB15, BGR15, UYVP, A420, RGB8P, YUV9, YVU9,\n                   IYU1, ARGB64, AYUV64, r210, I420_10BE, I420_10LE, I422_10BE, I422_10LE, Y444_10BE,\n                   Y444_10LE, GBR, GBR_10BE, GBR_10LE, NV16, NV24, NV12_64Z32, A420_10BE, A420_10LE,\n                   A422_10BE, A422_10LE, A444_10BE, A444_10LE, NV61, P010_10BE, P010_10LE, IYU2,\n                   VYUY, GBRA, GBRA_10BE, GBRA_10LE, GBR_12BE, GBR_12LE, GBRA_12BE, GBRA_12LE,\n                   I420_12BE, I420_12LE, I422_12BE, I422_12LE, Y444_12BE, Y444_12LE }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n multiview-mode: { (string)mono, (string)left, (string)right }\nvideo/x-bayer\n         format: { bggr, rggb, grbg, gbrg }\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n      framerate: [ 0/1, 2147483647/1 ]\n multiview-mode: { (string)mono, (string)left, (string)right }\n",
+                        "caps": "video/x-raw\n    format: {\n         I420,\n         YV12,\n         YUY2,\n         UYVY,\n         AYUV,\n         RGBx,\n         BGRx,\n         xRGB,\n         xBGR,\n         RGBA,\n         BGRA,\n         ARGB,\n         ABGR,\n         RGB,\n         BGR,\n         Y41B,\n         Y42B,\n         YVYU,\n         Y444,\n         v210,\n         v216,\n         NV12,\n         NV21,\n         GRAY8,\n         GRAY16_BE,\n         GRAY16_LE,\n         v308,\n         RGB16,\n         BGR16,\n         RGB15,\n         BGR15,\n         UYVP,\n         A420,\n         RGB8P,\n         YUV9,\n         YVU9,\n         IYU1,\n         ARGB64,\n         AYUV64,\n         r210,\n         I420_10BE,\n         I420_10LE,\n         I422_10BE,\n         I422_10LE,\n         Y444_10BE,\n         Y444_10LE,\n         GBR,\n         GBR_10BE,\n         GBR_10LE,\n         NV16,\n         NV24,\n         NV12_64Z32,\n         A420_10BE,\n         A420_10LE,\n         A422_10BE,\n         A422_10LE,\n         A444_10BE,\n         A444_10LE,\n         NV61,\n         P010_10BE,\n         P010_10LE,\n         IYU2,\n         VYUY,\n         GBRA,\n         GBRA_10BE,\n         GBRA_10LE,\n         GBR_12BE,\n         GBR_12LE,\n         GBRA_12BE,\n         GBRA_12LE,\n         I420_12BE,\n         I420_12LE,\n         I422_12BE,\n         I422_12LE,\n         Y444_12BE,\n         Y444_12LE\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\nmultiview-mode: {\n         (string)mono,\n         (string)left,\n         (string)right\n         }\nvideo/x-bayer\n    format: {\n         bggr,\n         rggb,\n         grbg,\n         gbrg\n         }\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n framerate: [\n         0/1,\n         2147483647/1\n         ]\nmultiview-mode: {\n         (string)mono,\n         (string)left,\n         (string)right\n         }\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -11851,7 +11974,7 @@
                         "writable": true
                     },
                     "typefind": {
-                        "blurb": "Run typefind before negotiating",
+                        "blurb": "Run typefind before negotiating (deprecated, non-functional)",
                         "construct": false,
                         "construct-only": false,
                         "default": "false",
@@ -11884,7 +12007,7 @@
         },
         "filename": "videotestsrc",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -11907,12 +12030,12 @@
                 "name": "volume",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: { F32LE, F64LE, S8, S16LE, S24LE, S32LE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: interleaved\n",
+                        "caps": "audio/x-raw\n    format: {\n         F32LE,\n         F64LE,\n         S8,\n         S16LE,\n         S24LE,\n         S32LE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: interleaved\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: { F32LE, F64LE, S8, S16LE, S24LE, S32LE }\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 2147483647 ]\n         layout: interleaved\n",
+                        "caps": "audio/x-raw\n    format: {\n         F32LE,\n         F64LE,\n         S8,\n         S16LE,\n         S24LE,\n         S32LE\n         }\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         2147483647\n         ]\n    layout: interleaved\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -11965,7 +12088,7 @@
         },
         "filename": "volume",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -11992,7 +12115,7 @@
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-raw\n         format: F32LE\n           rate: [ 1, 2147483647 ]\n       channels: [ 1, 256 ]\n",
+                        "caps": "audio/x-raw\n    format: F32LE\n      rate: [\n         1,\n         2147483647\n         ]\n  channels: [\n         1,\n         256\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -12059,12 +12182,12 @@
                 "name": "vorbisenc",
                 "pad-templates": {
                     "sink": {
-                        "caps": "audio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 1\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 2\n   channel-mask: 0x0000000000000003\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 3\n   channel-mask: 0x0000000000000007\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 4\n   channel-mask: 0x0000000000000033\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 5\n   channel-mask: 0x0000000000000037\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 6\n   channel-mask: 0x000000000000003f\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 7\n   channel-mask: 0x0000000000000d0f\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: 8\n   channel-mask: 0x0000000000000c3f\naudio/x-raw\n         format: F32LE\n         layout: interleaved\n           rate: [ 1, 200000 ]\n       channels: [ 9, 255 ]\n   channel-mask: 0x0000000000000000\n",
+                        "caps": "audio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 1\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 2\nchannel-mask: 0x0000000000000003\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 3\nchannel-mask: 0x0000000000000007\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 4\nchannel-mask: 0x0000000000000033\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 5\nchannel-mask: 0x0000000000000037\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 6\nchannel-mask: 0x000000000000003f\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 7\nchannel-mask: 0x0000000000000d0f\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: 8\nchannel-mask: 0x0000000000000c3f\naudio/x-raw\n    format: F32LE\n    layout: interleaved\n      rate: [\n         1,\n         200000\n         ]\n  channels: [\n         9,\n         255\n         ]\nchannel-mask: 0x0000000000000000\n",
                         "direction": "sink",
                         "presence": "always"
                     },
                     "src": {
-                        "caps": "audio/x-vorbis\n           rate: [ 1, 200000 ]\n       channels: [ 1, 255 ]\n",
+                        "caps": "audio/x-vorbis\n      rate: [\n         1,\n         200000\n         ]\n  channels: [\n         1,\n         255\n         ]\n",
                         "direction": "src",
                         "presence": "always"
                     }
@@ -12268,7 +12391,7 @@
         },
         "filename": "vorbis",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -12291,7 +12414,7 @@
                 "name": "ximagesink",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-raw\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/x-raw\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -12493,7 +12616,7 @@
         },
         "filename": "ximagesink",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     },
@@ -12516,7 +12639,7 @@
                 "name": "xvimagesink",
                 "pad-templates": {
                     "sink": {
-                        "caps": "video/x-raw\n      framerate: [ 0/1, 2147483647/1 ]\n          width: [ 1, 2147483647 ]\n         height: [ 1, 2147483647 ]\n",
+                        "caps": "video/x-raw\n framerate: [\n         0/1,\n         2147483647/1\n         ]\n     width: [\n         1,\n         2147483647\n         ]\n    height: [\n         1,\n         2147483647\n         ]\n",
                         "direction": "sink",
                         "presence": "always"
                     }
@@ -12808,7 +12931,7 @@
         },
         "filename": "xvimagesink",
         "license": "LGPL",
-        "package": "GStreamer Base Plug-ins",
+        "package": "GStreamer Base Plug-ins prerelease",
         "source": "gst-plugins-base",
         "url": "Unknown package origin"
     }
